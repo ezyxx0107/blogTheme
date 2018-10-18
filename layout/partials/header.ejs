@@ -1,0 +1,11 @@
+<div class="header">
+    <div class="inner clearfix">
+        <div class="logo fl">logo</div>
+        <div class="fr nav">
+            <% Object.keys(theme.menu).forEach(function(key) { %>
+            <a href="<%=theme.menu[key]%>">
+                <%=key%></a>
+            <% }); %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<% if (page.posts.length > 0) { %>
+<div id="recent-posts">
+  <ul class="list" id="list">
+    <% page.posts.sort('date', -1).limit(10).each(function(post) {  %>
+    <li>
+      <a href="<%=config.root + post.path%>">
+        <img src="<%=post.url%>" alt="">
+        <p></p>
+        <% post.tags.forEach(tag => { %>
+        <a href="javascript:;" target="_blank" class="tag">
+          <span class="chip bg-color">
+            <%= tag.name %></span>
+        </a>
+        <% }); %>
+      </a>
+    </li>
+    <% }); %>
+
+    <li>
+      <img src="https://pbs.twimg.com/media/DpjaSJmUwAE_Oq6.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://pbs.twimg.com/media/DpjaSJmUwAE_Oq6.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://pbs.twimg.com/media/DpjaSJmUwAE_Oq6.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://pbs.twimg.com/media/DpjaSJmUwAE_Oq6.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://pbs.twimg.com/media/DpjaSJmUwAE_Oq6.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://pbs.twimg.com/media/DpjaSJmUwAE_Oq6.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://pbs.twimg.com/media/DpjaSJmUwAE_Oq6.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://pbs.twimg.com/media/DpjaSJmUwAE_Oq6.jpg" alt="">
+    </li>
+    <li>
+      <img src="https://pbs.twimg.com/media/DpjaSJmUwAE_Oq6.jpg" alt="">
+    </li>
+  </ul>
+</div>
+<% } %>
